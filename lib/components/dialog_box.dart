@@ -5,19 +5,20 @@ class DialogBox extends StatelessWidget {
   final controller;
   VoidCallback onSave;
   VoidCallback onCancel;
-  DialogBox({super.key,
-  required this.controller,
-   required this.onCancel,
-   required this.onSave,
-   });
+  DialogBox({
+    super.key,
+    required this.controller,
+    required this.onCancel,
+    required this.onSave,
+  });
 
-  @override
+  @override    //==================Add=a=new=task==============
   Widget build(BuildContext context) {
     return AlertDialog(
-      backgroundColor: Colors.yellow,
+      backgroundColor: Colors.yellow.shade300,
       content: Container(
-        height: 420,
-        width: 620,
+        height: 400,
+        width: 600,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
@@ -27,14 +28,14 @@ class DialogBox extends StatelessWidget {
                   border: OutlineInputBorder(), hintText: "Add a new task"),
             ),
 
-            // buttons 1.save & 2,cancel
+            // ========buttons==1=save=&=2=cancel===========
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                //save button=====
+                //save button=============
                 MyButton(text: "Save", onPressed: () {}),
-                const SizedBox(width: 10),
-                //cancel button======
+                const SizedBox(width: 20),
+                //cancel button===========
                 MyButton(text: "Cancel", onPressed: () {})
               ],
             )
