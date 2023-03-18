@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  //saveNewTas==========
+  //saveNewTask============
   void saveNewTask() {
     setState(() {
       todoList.add([_controller.text, false]);
@@ -51,7 +51,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.yellow.shade200,
+      backgroundColor: Colors.teal.shade200,
       appBar: AppBar(
         title: Center(child: Text('TO DO')),
         elevation: 0,
